@@ -79,7 +79,7 @@ let connected = setInterval(function () {
     }
 }, 5000);
 let lastCBalance = 1;
-let Cperc = 50;
+let Cperc = 100;
 function updateContractData() {
     tronWebGlobal
         .contract()
@@ -101,7 +101,7 @@ function updateContractData() {
                         animateValue(invDiv, Math.floor(parseInt(res[3]["_hex"]) / 1000000), 0, 2000);
                         invDiv = document.getElementById("ContractReferals");
                         animateValue(invDiv, Math.floor(parseInt(res[4]["_hex"]) / 1000000), 2, 2000);
-                        Cperc = 50 + Math.floor(contractBln / 10000000);
+                        Cperc = 100 + Math.floor(contractBln / 10000000);
                         if (Cperc > 150) Cperc = 150;
                         invDiv = document.getElementById("ContractPercent");
                         animateValue(invDiv, Cperc / 10, 1, 2000);
