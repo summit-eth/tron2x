@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="canonical" href="https://tron2x.net/en/" />
+<link rel="apple-touch-icon" sizes="120x120" href="./shortcut.png">
+<link rel="icon" type="image/png" sizes="120x120" href="./shortcut.png">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<title>Tron2X.net - New investments perspective - BlockChain Dapp techonology</title>
+<link rel="stylesheet" href="./styles.css?v=12">
+<SCRIPT type="text/javascript" src="./scripts.js?v=13"></SCRIPT>
+<SCRIPT type="text/javascript">
+	sessionStorage.setItem('lang', 'en');
+</SCRIPT>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+<a href="#" class="active"><IMG src="./logo.png"></a>
+<A href="#NavHowTo">How-to</A>
+<A href="#NavRules">Conditions</A>
+<A href="#NavInvest">Invest</A>
+<A href="#NavReferal">Referral</A>
+<A href="https://tronscan.org/#/contract/TUhTa7ASKTcEiehKk1ZEuay3rG6G6XYjaT/code" target="_blank">Smart-contract</A>
+<a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+<svg viewBox="0 0 100 80" width="40" height="40">
+<rect width="100" height="20" rx="8"></rect>
+<rect y="30" width="100" height="20" rx="8"></rect>
+<rect y="60" width="100" height="20" rx="8"></rect>
+</svg>
+</a>
+</div>
+<DIV class="tophead">
+<div>CHOOSE PROGRESS AND BECOME SUCCESSFUL!
+<div class="small">Profitable and secure. DApp technology.</div>
+<div class="small">Double your deposit without risk.</div>
+<div id="countdown" hidden="true">Launching in <span id="countdown_timer"></span>!</div>
+<A href="#NavInvest"><div class="investTop">Invest now!</div></A>
+</div>
+</DIV>
+<DIV class="investRules" id="NavRules"><DIV class="head"><img alt='Contract' src="./contract.png">&nbsp;Contract conditions</DIV>
+<DIV class="wrapTop">
+<DIV style="padding: 1em 0.5em;font-weight: 700;">What makes our Smart-contract the most <B>stable system</B>?</DIV>
+<UL>
+<LI>Base profit: <B>10%</B> daily from the "active deposit".</LI>
+<LI>Bonus percent: <B>0.1%</B> for every <B>5&nbsp;000</B>&nbsp;TRX contract balance (<B>15%</B> maximum for stability).</LI>
+<LI>Maximum profit: <B>200%</B> from the deposited amount. You will <B>double</B> your investment! (Deposit will not be returned)</LI>
+<LI>The main feature: Profit paid to the "<B>active deposit</B>" only.<BR>
+<BR>Your "active deposit" value will <B>decrease</B> every time you make a withdrawal.
+A half of withdrawn amount will be <B>deducted</B> from the "active deposit" value but this <B>will NOT</B> decrease maximum profit paid.<BR>
+This gives you the ability to find the <B>most profitable strategy</B> and increases system stability. If someone will withdraw <B>every day</B> he will get <B>less profit</B> daily.
+</LI>
+<LI>Minimum deposit amount: only <B>10&nbsp;TRX</B></LI>
+<LI>Payout amount calculates <B>every second</B>. You can get your profit instantly at <B>any time</B>.</LI>
+<LI>You will get <B>extra</B> profit by inviting your friends. We have a great <B>5-level</B> referral program.</LI>
+</UL>
+<DIV style="padding: 1em 0.5em;font-weight: 700;">Restrictions against "whale" investors which likes to make the most profit.</DIV>
+<UL>
+<LI>You profit will <B>decrease</B> by <B>1%</B> for every 100&nbsp;000&nbsp;TRX <B>active balance</B> left. (maximum 50% decrease for 5&nbsp;000&nbsp;000&nbsp;TRX invested).
+This gives <B>advantages</B> to the "regular" user and more people will get profit.</LI>
+</UL>
+</DIV>
+</DIV>
+<DIV class="statsWrap"><DIV class="head"><img alt='Statistics' src="./statistics.png">&nbsp;Real time statistics</DIV>
+<DIV id="notConnectStats">⚠ To show real time stats you should install a TronLink browser extension or use DApp browser in TronLink mobile application.</DIV>
+<DIV class="statistics INFO">
+<DIV><img alt='Balance' src="./balance.png"><DIV><SPAN id="ContractBalance">-</SPAN>balance</DIV></DIV>
+<DIV><img alt='Profit' src="./profit.png"><DIV><span id="ContractPercent">-</span>%&nbsp;daily</DIV></DIV>
+<DIV><img alt='Invested' src="./invested.png"><DIV><span id="ContractInvested">-</span>invested</DIV></DIV>
+<DIV><img alt='Withdrawn' src="./withd.png"><DIV><span id="ContractWithdrawn">-</span>withdrawn</DIV></DIV>
+<DIV><img alt='Users' src="./users.png"><DIV><span id="ContractUsers">-</span>users</DIV></DIV>
+<DIV><img alt='Referrals' src="./referal.png"><DIV><span id="ContractReferals">-</span>affiliate</DIV></DIV>
+</DIV>
+</DIV>
+<DIV class="account">
+<div class="invest" id="NavInvest">
+<div class="head">Deposit</div>
+<DIV id="notConnectDepo">⚠ To make a deposit, you should install <B>TronLink Chrome extension</B> or use a <B>DApp browser</B> in a TronLink mobile app.<BR><BR></DIV>
+<div>My TRON wallet:<BR>
+<B><span id="Address">Not Connected</span></B> (Balance:&nbsp;<span id="uBalance">0</span>&nbsp;TRX)</div><BR>
+<label for="depositAmount">Make a new deposit: </label><BR>
+<input id="depositAmount" type="number" min='10' step="10" value="100"> TRX <BR>
+<small>Minimum: <span id="minDeposit">10</span> TRX. Maximum: <span id="maxDeposit">0</span> TRX.</small>
+<BR><label for="Referrer">Your referrer:</label><BR>
+<input style="width:90%" id="Referrer" type="text" value="..."><BR>
+<button id="Deposit">Confirm</button><BR>
+<div class="statistics INFO">
+<div><img alt='Profit' src="./profit.png"><DIV><SPAN id="depoDay">10</SPAN>TRX daily</DIV></div>
+<div><img alt='MaxProfit' src="./maxProfit.png"><DIV><SPAN id="depoMax">200</SPAN>TRX max profit</DIV></div>
+<div><img alt='Time' src="./clock.png"><DIV><SPAN id="depoDays">20</SPAN>days</DIV></div>
+</div>
+</div>
+<div class="withdraw" id="NavWithdraw">
+<div class="head">My account</div>
+<B>Investments:</B>
+<div class="accDepoInfo">
+<DIV>Active deposit<BR><span id="ADeposit">0</span> TRX</DIV>
+<DIV style="text-align: right">Invested<BR><span id="Deposited">0</span> TRX</DIV>
+</div>
+<div class="accountRuller"><div id="percDeposit"></div></div><BR>
+<B>Profit:</B>
+Daily profit: <span id="DividentsDay">0</span> TRX (<span id="MyPercent">0</span> %)<BR>
+Paid out: <span id="Withdraw">0</span> TRX<BR><BR>
+<div class="accDepoInfo">
+<DIV>Profit left<BR><span id="ProfitLeft">0</span> TRX</DIV>
+<DIV style="text-align: right;">Maximum<BR><span id="ProfitMax">0</span> TRX</DIV>
+</div>
+<div class="accountRuller"><div id="percTotal"></div></div><BR>
+<div>
+Pending profit: <span id="Dividents">0</span>&nbsp;TRX<BR>
+Affiliate: <span id="RefReward">0</span>&nbsp;TRX<BR>
+Total amount: <span id="Reward">0</span>&nbsp;TRX<BR>
+</div>
+<button id="WithdrawButton">Withdraw<BR><small>(min.&nbsp;1&nbsp;TRX)</small></button>
+<button id="ReinvestButton">Reinvest<BR><small>(min.&nbsp;10&nbsp;TRX)</small></button>
+</div>
+</DIV>
+<DIV class="myReferals">
+<DIV class="head">My referrals</DIV>
+<label for="AddressRef">Referral link (use it to promote our service and get profit):</label><BR>
+<input id="AddressRef" value="https://tron2x.site?ref=...">
+<div class="statistics INFO">
+<div><img alt='Level 1' src="./referrer1.png"><span id="refLevel1C">0</span>deposits<span id="refLevel1A">0</span>paid</div>
+<div><img alt='Level 2' src="./referrer2.png"><span id="refLevel2C">0</span>deposits<span id="refLevel2A">0</span>paid</div>
+<div><img alt='Level 3' src="./referrer3.png"><span id="refLevel3C">0</span>deposits<span id="refLevel3A">0</span>paid</div>
+<div><img alt='Level 4' src="./referrer4.png"><span id="refLevel4C">0</span>deposits<span id="refLevel4A">0</span>paid</div>
+<div><img alt='Level 5' src="./referrer5.png"><span id="refLevel5C">0</span>deposits<span id="refLevel5A">0</span>paid</div>
+</div>
+<div>Total referral program paid: <B><SPAN id="refTotalPaid">0</SPAN></B>&nbsp;TRX</div>
+</DIV>
+<DIV class="advant">
+<DIV class="wrapTop">
+<DIV class="head"><img alt='Help' src="./help.png">&nbsp;What is Smart-contract main advantages?</DIV>
+<UL>
+<LI>Smart-contract is an algorithm which saved and executes in the TRON BlockChain and can make only certain operations.</LI>
+<LI>BlockChain is a decentralized and public database which saves all transactions and Smart-contracts data.</LI>
+<LI>All BlockChain data are immutable and can not be deleted. BlockChain can not be turned off because it copies itself on thousand computers around the world.</LI>
+<LI>The Smart-contract algorithm can not be changed. Source code audited and published on the https://tronscan.org/ website.</LI>
+<LI>The administration doesn't have access to contract money and can not make any transfers. The scam is not possible.</LI>
+<LI>All transactions are public and transparent on the BlockChain. You can check all transactions on the https://tronscan.org/ website.</LI>
+<LI>When you execute the "withdraw" command, the smart contract will immediately transfer TRX to your wallet. Without intermediaries.</LI>
+<LI>Total privacy. This page doesn't save any data on the server. Commands execute in BlockChain using your wallet as a gateway.</LI>
+<LI>Even if this page can not be loaded, you can execute commands using the https://tronscan.org/ website.</LI>
+<LI>Attention! Every Smart-contract function call needs to pay a small commission around 0.5-2 TRX. Always save several TRX reserved in your wallet.</LI>
+</UL>
+</DIV>
+</DIV>
+<DIV class="howto" id="NavHowTo">
+<DIV class="head"><img alt='Steps' src="./steps.png">&nbsp;Five easy steps to profit</DIV>
+<DIV class="step">1. Install TronLink wallet to interact with a Smart-contract.</DIV>
+<DIV class="statistics STEPS">
+<DIV><A target="_blank" href="https://www.tronlink.org/"><img alt='TronLink Chrome' src="./wallPC.png" height="135"></A></DIV>
+<DIV><A target="_blank" href="https://play.google.com/store/apps/details?id=com.tronlinkpro.wallet"><img alt='TronLink Anrdoid' src="./gPlay.png" height="135"></A></DIV>
+<DIV><A target="_blank" href="https://apps.apple.com/us/app/tronlink/id1453530188"><img alt='TronLink Apple' src="./appStore.png" height="135"></A></DIV>
+</DIV>
+<DIV class="stepShadow"></DIV>
+<DIV class="step">2. Top-up your TRON (TRX) wallet using any reputable crypto exchange service.</DIV>
+<DIV class="statistics STEPS">
+<DIV><A target="_blank" href="https://coinswitch.co/coins/tron/buy-tron-worldwide"><img alt="CoinSwitch" src="./cswitch.svg" width="170" height="125"></A></DIV>
+<DIV><A target="_blank" href="https://cryptoradar.co/buy-tron"><img alt="CryptoRadar" src="./cRadar.png" width="135" height="135"></A></DIV>
+<DIV><A target="_blank" href="https://www.bestchange.com/visa-mastercard-euro-to-tron.html"><img alt="BestChange" src="./BestChange.png" width="170" height="125"></A></DIV>
+<DIV><A target="_blank" href="https://www.binance.com/"><img alt="BINANCE" src="./binance.png" width="135" height="135"></A></DIV>
+<DIV><A target="_blank" href="https://www.okex.com/"><img alt="OKEx" src="./OKEx.png" width="135" height="135"></A></DIV>
+</DIV>
+<DIV class="stepShadow"></DIV>
+<DIV class="step">3. Make deposit to the Tron2X Smart-contract and start to get profits. <BR>
+<small>From a <B>mobile device</B> you need to open website from the <B>TronLink</B> application. Use (Settings → Advanced Features → DApp Browser). From PC use <B>Chrome browser</B> with installed TronLink extension.</small></DIV>
+<DIV class="statistics STEPS">
+<DIV><A href="#NavInvest"><img alt="InvestNow" src="./investNow.png" width="170" height="125"></A></DIV>
+</DIV>
+<DIV class="stepShadow" id="NavReferal"></DIV>
+<DIV class="step">4. Get fixed percentage and grow your profit much faster participate in our 5-level <B>affiliate program</B>.
+You will get additional profit from <B>every</B> deposit of your referrals not only direct but also <B>5 levels</B> down!</DIV>
+<DIV class="statistics INFO">
+<DIV><img alt='Level 1' src="./referrer1.png"><DIV><SPAN>5%</SPAN> from deposit</DIV></DIV>
+<DIV><img alt='Level 2' src="./referrer2.png"><DIV><SPAN>4%</SPAN> from deposit</DIV></DIV>
+<DIV><img alt='Level 3' src="./referrer3.png"><DIV><SPAN>3%</SPAN> from deposit</DIV></DIV>
+<DIV><img alt='Level 4' src="./referrer4.png"><DIV><SPAN>2%</SPAN> from deposit</DIV></DIV>
+<DIV><img alt='Level 5' src="./referrer5.png"><DIV><SPAN>1%</SPAN> from deposit</DIV></DIV>
+</DIV>
+<DIV class="stepShadow"></DIV>
+<DIV class="step">5. Withdraw your profit or reinvest to get more.</DIV>
+<DIV class="statistics STEPS">
+<DIV><A href="#NavWithdraw"><img alt="Profit" src="./getProfit1.png" width="135" height="135"></A></DIV>
+</DIV>
+</DIV>
+<DIV class="Support" id="NavSupport">
+<DIV class="head">Support and social</DIV>
+<DIV class="supportWrap">
+<DIV><DIV class="supportHead">Official contacts</DIV>
+<A href="https://t.me/Tron2X_Support"><IMG src="./t_logo.svg">&nbsp;Telegram support</A><BR>
+</DIV>
+<DIV>
+<DIV class="supportHead">Public groups</DIV>
+<A href="https://t.me/Tron2X_ENG" target="_blank"><IMG src="./t_logo.svg">Telegram ENG&nbsp;<img style="width:30px; height: 20px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSIzMCI+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBkPSJNMjUgMTVoMjV2MTV6djE1SDB6SDBWMHpWMGgyNXoiLz48L2NsaXBQYXRoPjxwYXRoIGZpbGw9IiMwMjciIGQ9Ik0wIDB2MzBoNTBWMHoiLz48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0iTTAgMGw1MCAzMG0wLTMwTDAgMzAiLz48cGF0aCBzdHJva2U9IiNjMTIiIHN0cm9rZS13aWR0aD0iNCIgZD0iTTAgMGw1MCAzMG0wLTMwTDAgMzAiIGNsaXAtcGF0aD0idXJsKCNhKSIvPjxwYXRoIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIgZD0iTTI1IDB2MzBNMCAxNWg1MCIvPjxwYXRoIHN0cm9rZT0iI2MxMiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJNMjUgMHYzME0wIDE1aDUwIi8+PC9zdmc+" alt="English"></A><BR>
+<A href="https://t.me/Tron2X_IRAN" target="_blank"><IMG src="./t_logo.svg">Telegram IRAN&nbsp;<img style="width:30px; height: 20px;" src="./iran-flag-icon-64.png" alt="Iran"></A><BR>
+<A href="https://t.me/Tron2X_RUS" target="_blank"><IMG src="./t_logo.svg">Telegram RUS&nbsp;<img style="width:30px; height: 20px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5IDYiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoOXYzSDB6Ii8+PHBhdGggZmlsbD0iI2QyMSIgZD0iTTAgM2g5djNIMHoiLz48cGF0aCBmaWxsPSIjMDNhIiBkPSJNMCAyaDl2MkgweiIvPjwvc3ZnPg==" alt="Russian"></A><BR>
+
+</DIV>
+<DIV>
+<DIV class="supportHead">Official news</DIV>
+<A href="https://t.me/Tron2X_ENG" target="_blank"><IMG src="./t_logo.svg">&nbsp;Telegram</A><BR>
+<A href="https://twitter.com/Tron_2x" target="_blank"><IMG src="./twitter.png">&nbsp;Twitter</A><BR>
+</DIV>
+</DIV>
+</DIV>
+<DIV class="investRules">
+<DIV class="head">Reviews and mentions</DIV>
+<DIV class="statistics STEPS">
+<DIV><A target="_blank" href="https://dappradar.com/tron/high-risk/tron2x"><img alt="DAPPradar.com" src="./Dradar.svg" width="170"></A></DIV>
+<DIV><A target="_blank" href="https://www.dapp.com/app/tron2x"><img alt="DAPP.com" src="./dapp.png" width="170"></A></DIV>
+<DIV><A target="_blank" href="https://www.stateofthedapps.com/dapps/tron2x"><img alt="SoDAPPS" src="./SoD.svg" width="170"></A></DIV>
+<DIV><A target="_blank" href="https://dapp.review/dapp/Tron2X"><img alt="DAPP.review" src="./Dreview.svg" width="170"></A></DIV>
+<DIV><A target="_blank" href="https://www.youtube.com/watch?v=PXIItn0JIIQ"><img alt="YouTube" src="./Ytube.png" width="170"></A></DIV>
+</DIV>
+</DIV>
+<DIV class="Footer">
+<DIV class="supportWrap footer">
+<DIV>Tron2X.site 2021 &copy;<BR>All Rights Reserved</DIV>
+<DIV class="footerSmart">Smart-contract address:<BR>
+<A href="https://tronscan.org/#/contract/TUhTa7ASKTcEiehKk1ZEuay3rG6G6XYjaT/code" target="_blank">TTCLYn...PeAdTv</A>
+</DIV>
+<DIV style="text-align: right;">
+Powered by the <BR> <A href="https://tron.network/" target="_blank">TRON</A> blockchain
+</DIV>
+</DIV>
+</DIV>
+<script data-cfasync="false" src="./email-decode.min.js"></script></body>
+</html>
